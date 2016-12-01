@@ -31,10 +31,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', 'Idle
         $ocLazyLoadProvider.config({
             // Set to true if you want to see what and when is dynamically loaded
             debug: true,
-            modules: [{
-                name: 'match',
-                files: ['scripts.html', './bower_components/ng-resource/dist/ng-resource.js']
-            }]
+            //modules: [{
+            //    name: 'match',
+            //    files: ['scripts.html', './bower_components/ng-resource/dist/ng-resource.js']
+            //}]
         });
         //$locationProvider.html5Mode({ enabled: true, requireBase: false});
         $stateProvider
@@ -50,9 +50,9 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', 'Idle
                 data: {pageTitle: 'Home page', specialClass: 'index-page'},
                 controller: 'TestCtrl',
                 resolve: {
-                    loadPlugin: function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('match');
-                    }
+                    //loadPlugin: function ($ocLazyLoad) {
+                    //    return $ocLazyLoad.load('match');
+                    //}
                 }
             })
             .state('app.view1', {
