@@ -1,3 +1,4 @@
-angular.module("myApp").controller("TestCtrl",[function(){
-    alert("I'm working!");
+angular.module("myApp").controller("TestCtrl",['$scope', function($scope){
+    $scope.text = "I'm working!";
+    alert($scope.text);
 }]);
